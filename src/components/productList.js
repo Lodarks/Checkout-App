@@ -13,7 +13,6 @@ const ProductList = () => {
     selectedItems,
     setSelectedItems,
     setBasket,
-    basket,
     productColors,
     setProductColors,
     productQuantity,
@@ -104,7 +103,6 @@ const ProductList = () => {
     );
     setProductQuantity(1);
   };
-  console.log(basket);
   return (
     <div className='pt-2 pb-2 text-sm flex flex-col-reverse'>
       {selectedItems.map((product, index) => (
