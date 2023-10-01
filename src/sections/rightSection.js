@@ -157,12 +157,12 @@ const RightSection = () => {
           <FaRegCreditCard className='mr-1' />
           <p>Payment Method(Cash)(F9)</p>
         </div>
-        <div className='flex w-full justify-center p-3'>
+        <div className='flex w-full justify-center p-3 cursor-pointer'>
           <div
             onClick={() => handleCheckout()}
-            className=' w-80 flex justify-center bg-green-700 text-white h-10 rounded-md items-center hover:bg-green-950 hover:h-12 hover:w-72 transition-all ease duration-150'
+            className=' w-80 flex justify-center bg-[#61bcb8] text-white h-10 rounded-md items-center hover:bg-[#2e5957] hover:h-12 hover:w-72 transition-all ease duration-150'
           >
-            <button className=''>Checkout</button>
+            <button className=' font-bold'>Checkout</button>
             <div className='flex items-center ml-4'>
               ${totalPrice}
               <MdKeyboardDoubleArrowRight className='' size={30} />

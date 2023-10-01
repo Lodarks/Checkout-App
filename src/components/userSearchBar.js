@@ -72,7 +72,7 @@ const UserSearchBar = () => {
         )}
       </label>
       <div
-        className={`absolute bg-gray-300 ml-4 w-28 sm:w-28 md:w-36 lg:w-80 mt-3 h-52 z-30 rounded-md ${
+        className={`absolute bg-gray-300 ml-4 w-28 sm:w-28 md:w-36 lg:w-80 mt-3 h-52 z-30 cursor-pointer rounded-md ${
           data.length === 0 ? "hidden" : "overflow-y-scroll"
         }`}
       >

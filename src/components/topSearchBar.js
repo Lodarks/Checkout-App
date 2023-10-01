@@ -60,7 +60,7 @@ const TopSearchBar = () => {
         />
       </label>
       <div
-        className={`absolute bg-gray-300 ml-4 w-40 sm:w-60 md:w-96 mt-3 h-52 z-30 rounded-md ${
+        className={`absolute bg-gray-300 ml-4 w-40 sm:w-60 md:w-96 mt-3 h-52 z-30 rounded-md cursor-pointer ${
           data.length === 0 ? "hidden" : "overflow-y-scroll"
         }`}
       >
