@@ -52,7 +52,7 @@ const RightSection = () => {
     .map((item) => `${item.productName} - $${item.productPrice}`)
     .join(", ");
 
-  const handleCheckout = () => {
+  const checkout = () => {
     if (isUserSelected) {
       if (paidAmount >= totalPrice) {
         const data = {
@@ -125,21 +125,36 @@ const RightSection = () => {
         </div>
 
         <div className='flex justify-evenly w-full'>
-          <p className='border-1 border-gray-300 w-16 flex justify-center items-center h-6'>
+          <p
+            onClick={() => setPaidAmount(totalPrice)}
+            className='cursor-pointer border-1 border-gray-300 w-16 flex justify-center items-center h-6'
+          >
             ${totalPrice}
           </p>
-          <p className='border-1 border-gray-300 w-16 flex justify-center items-center h-6'>
+          <p
+            onClick={() => setPaidAmount(roundedTotal)}
+            className=' cursor-pointer border-1 border-gray-300 w-16 flex justify-center items-center h-6'
+          >
             ${roundedTotal}
           </p>
-          <p className='border-1 border-gray-300 w-16 flex justify-center items-center h-6'>
+          <p
+            onClick={() => setPaidAmount(roundedTotal + 10)}
+            className='cursor-pointer border-1 border-gray-300 w-16 flex justify-center items-center h-6'
+          >
             ${roundedTotal + 10}
           </p>
-          <p className='border-1 border-gray-300 w-16 flex justify-center items-center h-6'>
+          <p
+            onClick={() => setPaidAmount(roundedTotal + 20)}
+            className='cursor-pointer border-1 border-gray-300 w-16 flex justify-center items-center h-6'
+          >
             ${roundedTotal + 20}
           </p>
         </div>
         <div className=' w-full flex justify-center mt-2'>
-          <p className='border-1 border-gray-300 w-16 flex justify-center items-center h-6'>
+          <p
+            onClick={() => setPaidAmount(roundedTotal + 50)}
+            className='cursor-pointer border-1 border-gray-300 w-16 flex justify-center items-center h-6'
+          >
             ${roundedTotal + 50}
           </p>
         </div>
@@ -159,7 +174,7 @@ const RightSection = () => {
         </div>
         <div className='flex w-full justify-center p-3 cursor-pointer'>
           <div
-            onClick={() => handleCheckout()}
+            onClick={() => checkout()}
             className=' w-80 flex justify-center bg-[#61bcb8] text-white h-10 rounded-md items-center hover:bg-[#2e5957] hover:h-12 hover:w-72 transition-all ease duration-150'
           >
             <button className=' font-bold'>Checkout</button>
